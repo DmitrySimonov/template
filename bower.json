@@ -1,0 +1,9 @@
+{
+  "name": "start",
+  "version": "0.1.0",
+  "dependencies": {
+    "jquery": "1.11",
+    "reset-css": "~2.0.2011012603"
+  },
+  "devDependencies": {}
+}
