@@ -1,6 +1,7 @@
 'use strict';
 
 var   gulp          = require('gulp'),
+      args          = require('yargs').argv,
       sass          = require('gulp-sass'),
       less          = require('gulp-less'),
       autoprefixer  = require('gulp-autoprefixer'),
@@ -148,17 +149,18 @@ gulp.task('fonts:build', function() {
 });
 
 gulp.task('watch', function () {
-  gulp.watch('bower.json',['bower']);
-  gulp.watch('app/scss/*.scss', ['scss']);
-  gulp.watch('app/jade/*.jade', ['jade']);
-  gulp.watch('app/less/*.less', ['less']);
-  gulp.watch('app/js/**/*.js', ['js']);
-  // gulp.watch('app/coffee/**/*.coffee', ['coffee']);
-  gulp.watch('app/includes/*.html', ['include']);
-  gulp.watch('app/templates/*.html', ['include']);
-  gulp.watch('app/*.html', ['include']);
-  gulp.watch(['app/*.html'], ['html']);
-  // gulp.watch(['app/css/*.css'], ['css']);
+ gulp.watch('bower.json',['bower']);
+ gulp.watch('app/scss/*.scss', ['scss']);
+ gulp.watch('app/jade/*.jade', ['jade']);
+ gulp.watch('app/less/*.less', ['less']);
+ gulp.watch('app/js/**/*.js', ['js']);
+ // gulp.watch('app/coffee/**/*.coffee', ['coffee']);
+ gulp.watch('app/includes/*.html', ['include']);
+ gulp.watch('app/templates/*.html', ['include']);
+ gulp.watch('app/head.html', ['include']);
+ gulp.watch('app/footer-scripts.html', ['include']);
+ // gulp.watch(['app/*.html'], ['html']);
+ // gulp.watch(['app/css/*.css'], ['css']);
 });
 
 // Создаем папку в продакшн (gulp build)
