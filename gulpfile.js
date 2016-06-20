@@ -34,7 +34,7 @@ gulp.task('connect', function() {
 
 
 gulp.task('bower-footer', function () {
-  gulp.src('app/footer-scripts.html')
+  gulp.src('app/footer.html')
     .pipe(wiredep({
       directory: "app/bower_components/",
     }))
@@ -158,7 +158,7 @@ gulp.task('watch', function () {
  gulp.watch('app/includes/*.html', ['include']);
  gulp.watch('app/templates/*.html', ['include']);
  gulp.watch('app/head.html', ['include']);
- gulp.watch('app/footer-scripts.html', ['include']);
+ gulp.watch('app/footer.html', ['include']);
  // gulp.watch(['app/*.html'], ['html']);
  // gulp.watch(['app/css/*.css'], ['css']);
 });
